@@ -635,13 +635,14 @@ export default function FloatingMenu({ onClose }: Props) {
       >
         {/* Header */}
         <div className="flex items-center justify-between mb-3">
-          {history.length > 1 ? (
-            <button onClick={goBack} className="flex items-center gap-1 text-sm font-medium">
-              <ArrowLeft size={18} /> Back
-            </button>
-          ) : (
-            <h2 className="text-lg font-semibold"></h2>
-          )}
+          {history.length > 1 && (
+    <button
+      onClick={goBack}
+      className="flex items-center gap-1 text-sm font-medium"
+    >
+      <ArrowLeft size={18} /> Back
+    </button>
+  )}
         </div>
 
         {/* Menu items */}
